@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c5a4c418-1efc-4b1e-a135-b97e7e594806">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     obat.`id_obat` AS obat_id_obat,
+     obat.`nama_obat` AS obat_nama_obat,
+     obat.`jumlah` AS obat_jumlah,
+     obat.`kategori` AS obat_kategori,
+     obat.`tgl_kadaluarsa` AS obat_tgl_kadaluarsa,
+     obat.`harga` AS obat_harga
+FROM
+     `obat` obat]]>
+	</queryString>
+	<field name="obat_id_obat" class="java.lang.String"/>
+	<field name="obat_nama_obat" class="java.lang.String"/>
+	<field name="obat_jumlah" class="java.lang.Integer"/>
+	<field name="obat_kategori" class="java.lang.String"/>
+	<field name="obat_tgl_kadaluarsa" class="java.sql.Date"/>
+	<field name="obat_harga" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="215" y="8" width="172" height="28" uuid="ad70ff23-7a39-478a-9d80-fdec95b41c05"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APOTEK KELUARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="36" width="204" height="18" uuid="8ed17455-8190-42c9-89a3-a29576b23c7a"/>
+				<text><![CDATA[Jalan Ringroad Utara, Jombor, Yogyakarta]]></text>
+			</staticText>
+			<image>
+				<reportElement x="138" y="8" width="77" height="55" uuid="4e3f3bde-5dc9-4908-b6d9-2105722a7904"/>
+				<imageExpression><![CDATA["C:\\Users\\Kunyex\\Pictures\\logo-apotek.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="246" y="54" width="117" height="20" uuid="532a3798-9ec0-4718-9e98-b8502490c6ab"/>
+				<text><![CDATA[Telp. 021 445 554 234]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="212" y="10" width="143" height="20" uuid="f362066c-5a3e-427c-ab12-d1ba032f222d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN OBAT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="54" height="20" uuid="54166cc1-fdd5-4129-a87e-e7b0bc03092c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID OBAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="41" width="100" height="20" uuid="50aa9732-8544-40e4-8a6b-7420d27046d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA OBAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="41" width="100" height="20" uuid="f901357c-ae7e-4943-8900-9fb3ac157a9b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[STOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="41" width="100" height="20" uuid="67d6f54e-30e8-4c93-83a9-382698795dc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[KATEGORI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="41" width="100" height="20" uuid="c4847874-a3b0-4070-becd-4bbc9b814654"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="41" width="100" height="20" uuid="fd28a368-6c87-4bf7-9654-aa057d7f366a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TGL KADALUARSA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="54" height="20" uuid="8c4f8581-3fff-4ed2-84e9-84af8cbd1ee4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obat_id_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="100" height="20" uuid="fdaf2ab2-c5d7-4608-a02c-395833bea95f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obat_nama_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="0" width="100" height="20" uuid="3bd64ce1-8ce5-47ff-b3ab-51983be60581"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obat_jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="100" height="20" uuid="ea58fa57-d4c8-44d2-b21c-943011c60ca8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obat_kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="100" height="20" uuid="e27b6f9c-3782-47e2-98da-cdbf7e46ce07"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obat_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="454" y="0" width="100" height="20" uuid="c4bcbd4e-f8f9-4bfa-8a07-07f406dfe0c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{obat_tgl_kadaluarsa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="411" y="5" width="100" height="20" uuid="e9389d34-ce3e-414c-8bf4-d13e541b57e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ttd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="25" width="121" height="20" uuid="f62c3cc2-c12b-497e-9f54-a87fc5e43f7c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kepala Apotik Keluarga]]></text>
+			</staticText>
+			<line>
+				<reportElement x="403" y="98" width="121" height="1" uuid="ee405657-40d4-44f4-926d-8642ac8a1e12"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

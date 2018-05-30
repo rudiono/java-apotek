@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="42af8517-6e82-47fc-baf4-93d6c52aeaac">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="49"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     transaksi_detail.`id_transaksi` AS transaksi_detail_id_transaksi,
+     transaksi_detail.`nama` AS transaksi_detail_nama,
+     transaksi_detail.`nama_obat` AS transaksi_detail_nama_obat,
+     transaksi_detail.`harga` AS transaksi_detail_harga,
+     transaksi_detail.`jml_beli` AS transaksi_detail_jml_beli,
+     transaksi_detail.`total` AS transaksi_detail_total,
+     transaksi_detail.`tgl_transaksi` AS transaksi_detail_tgl_transaksi
+FROM
+     `transaksi_detail` transaksi_detail]]>
+	</queryString>
+	<field name="transaksi_detail_id_transaksi" class="java.lang.String"/>
+	<field name="transaksi_detail_nama" class="java.lang.String"/>
+	<field name="transaksi_detail_nama_obat" class="java.lang.String"/>
+	<field name="transaksi_detail_harga" class="java.lang.Integer"/>
+	<field name="transaksi_detail_jml_beli" class="java.lang.Integer"/>
+	<field name="transaksi_detail_total" class="java.lang.Integer"/>
+	<field name="transaksi_detail_tgl_transaksi" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="193" y="13" width="172" height="28" uuid="082e9774-c6b5-4901-bf5e-16b7b6b3ac17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APOTEK KELUARGA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="116" y="13" width="77" height="55" uuid="7bb153b2-2acf-462b-bad0-8da560d884d1"/>
+				<imageExpression><![CDATA["C:\\Users\\Kunyex\\Pictures\\logo-apotek.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="193" y="41" width="204" height="18" uuid="9864320f-641a-4df0-a767-60b73c2998b3"/>
+				<text><![CDATA[Jalan Ringroad Utara, Jombor, Yogyakarta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="59" width="117" height="20" uuid="e5cec788-c6ce-49f0-a366-b1459c3fbafa"/>
+				<text><![CDATA[Telp. 021 445 554 234]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="78" width="555" height="1" uuid="a5e75574-e1fd-4db5-b5c7-d8fc25ef8a60"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="197" y="14" width="143" height="20" uuid="db9b1def-8bb5-4360-97d3-cf1a9ce0c2cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN TRANSAKSI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="41" width="61" height="20" uuid="aa3c4cbd-9747-41d5-bbd0-932d6b52ce8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID TRANSAKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="41" width="87" height="20" uuid="6615d612-bbdb-4d86-9586-7ddfe5e4b7f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="41" width="100" height="20" uuid="1af36902-9069-4bc9-ad48-6ea51c67632b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA OBAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="41" width="79" height="20" uuid="206e0ec5-ade6-4954-8216-7ec2ca4084e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="41" width="74" height="20" uuid="ad4c4a53-ff5c-4297-ac60-b011a16a5f22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH BELI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="41" width="65" height="20" uuid="69ff6f88-b8d8-43d9-840e-2e1fc602915a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="41" width="88" height="20" uuid="579d68f8-fec2-49ef-8160-8eb21b00c680"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TGL TRAKSAKSI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="61" height="28" uuid="f751713f-0057-4d2e-a370-44ae732d235c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_id_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="0" width="88" height="28" uuid="50ecbc9c-b4b5-477a-a5ca-c65d2191cf65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="0" width="100" height="28" uuid="318b5a49-06e7-4e11-b58d-07eac385655a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_nama_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="0" width="79" height="28" uuid="aa11f3d4-387a-459f-a058-2e3989d2f641"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="0" width="74" height="28" uuid="d4a78349-6588-48a0-b3e4-366677ff8eb2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_jml_beli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="0" width="65" height="28" uuid="7cacfbd6-fbe6-4b77-af35-06a259d0e739"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="0" width="88" height="28" uuid="cebe2b53-744a-44be-8831-84b1cf33009d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_detail_tgl_transaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="397" y="0" width="100" height="20" uuid="8aa6a9fb-05b9-4756-b725-56f99ec1ed77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ttd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="20" width="121" height="20" uuid="4e249d32-5aa2-4ed1-b906-bafd9c76bff6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Kepala Apotik Keluarga]]></text>
+			</staticText>
+			<line>
+				<reportElement x="389" y="93" width="121" height="1" uuid="dfff18ea-dfa6-4260-aaa6-5a47c6c9cc68"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
